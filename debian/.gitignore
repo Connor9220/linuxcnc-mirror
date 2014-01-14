@@ -5,6 +5,8 @@ linuxcnc-sim
 files
 rules
 control
+control.posix
+control.rtai
 tmp
 linuxcnc
 linuxcnc-dev
