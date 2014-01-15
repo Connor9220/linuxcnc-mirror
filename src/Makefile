@@ -733,6 +733,7 @@ install: install-test install-kernel-dep install-kernel-indep
 install-dirs:
 	$(DIR)  $(DESTDIR)$(EMC2_RTLIB_DIR) \
 		$(DESTDIR)$(sysconfdir)/linuxcnc $(DESTDIR)$(bindir) \
+		$(DESTDIR)$(sysconfdir)/init.d \
 		$(DESTDIR)$(includedir)/linuxcnc \
 		$(DESTDIR)$(docsdir) $(DESTDIR)$(ncfilesdir) \
 		$(DESTDIR)$(EMC2_LIBEXEC_DIR) \
@@ -759,7 +760,7 @@ install-kernel-indep: install-dirs
 	$(FILE) $(filter-out %/skeleton.3rtapi, $(wildcard ../docs/man/man3/*.3rtapi)) $(DESTDIR)$(mandir)/man3
 	$(FILE) $(filter-out %/skeleton.9, $(wildcard ../docs/man/man9/*.9)) $(DESTDIR)$(mandir)/man9
 	$(FILE) objects/*.msg $(DESTDIR)$(tcldir)/msgs
-	$(EXE) ../scripts/realtime $(DESTDIR)$(bindir)
+	$(EXE) ../scripts/realtime $(DESTDIR)$(sysconfdir)/init.d/
 	$(EXE) ../scripts/halrun $(DESTDIR)$(bindir)
 	$(EXE) ../scripts/haltcl $(DESTDIR)$(bindir)
 	$(EXE) ../scripts/simulate_probe $(DESTDIR)$(bindir)
