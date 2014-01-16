@@ -171,12 +171,6 @@ def subst(infile, outfile):
         print >>sys.stderr, "Failed to run sed!"
 
 
-#    sed -e "s|@MODULE_PATH@|$MODULE_PATH|g" \
-#        -e "s|@MODULE_EXT@|$MODULE_EXT|g" \
-
-#        -e "s|@EXTRA_FILES@|$EXTRA_FILES|g" \  names of files to include in main deb (rtapi_app for sim, module_helper for rtai)
-
-
 # posix is always enabled
 flavors.add('posix')
 
