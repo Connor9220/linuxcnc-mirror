@@ -162,6 +162,8 @@ def subst(infile, outfile):
             + " -e 's|@POSIX_RECOMMENDS@|%s|g'" % ''
             + " -e 's|@RTAI_DEPENDS@|%s|g'" % ''
             + " -e 's|@RTAI_RECOMMENDS@|%s|g'" % ''
+            + " -e 's|@RTPREEMPT_DEPENDS@|%s|g'" % ''
+            + " -e 's|@RTPREEMPT_RECOMMENDS@|%s|g'" % ''
             + " %s > %s" % (infile, outfile),
             shell=True
         )
