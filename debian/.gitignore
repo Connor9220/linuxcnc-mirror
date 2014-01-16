@@ -1,7 +1,3 @@
-linuxcnc-common
-linuxcnc-firmware
-linuxcnc-firmware-*
-linuxcnc-sim
 files
 rules
 control
@@ -9,10 +5,8 @@ control.posix
 control.rtai
 control.rtpreempt
 tmp
-linuxcnc
-linuxcnc-dev
-linuxcnc-sim-dev
-linuxcnc-python
+linuxcnc/
+linuxcnc-dev/
 linuxcnc-doc-*/
 linuxcnc-rtpreempt/
 *.substvars
