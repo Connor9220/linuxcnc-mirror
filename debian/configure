@@ -68,6 +68,7 @@ def configure_for_installed_realtime_kernel(kernel_version):
     if config_ipipe and not config_xeno and not config_rtpreempt:
         flavors.add('rtai')
         build_depends.add("linux-headers-%s" % kernel_version)
+        build_depends.add("rtai-modules-%s" % kernel_version)
         recommends.add("rtai-modules-%s" % kernel_version)
 
     elif config_ipipe and config_xeno and not config_rtpreempt:
