@@ -80,7 +80,7 @@ def configure_for_installed_realtime_kernel(kernel_version):
         recommends.add('libxenomai1')
         recommends.add('xenomai-runtime')
 
-    elif config_ipipe and not config_xeno and config_rtpreempt:
+    elif not config_ipipe and not config_xeno and config_rtpreempt:
         flavors.add('rtpreempt')
         build_depends.add('libpth-dev')
         build_depends.add('libudev-dev')
