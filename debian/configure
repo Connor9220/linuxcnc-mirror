@@ -167,8 +167,8 @@ def subst(infile, outfile):
         )
         if retcode < 0:
             print >>sys.stderr, "Child was terminated by signal", -retcode
-    except OSError as e:
-        print >>sys.stderr, "Execution failed:", e
+    except OSError:
+        print >>sys.stderr, "Failed to run sed!"
 
 
 #    sed -e "s|@MODULE_PATH@|$MODULE_PATH|g" \
